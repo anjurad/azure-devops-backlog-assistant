@@ -121,10 +121,4 @@ Always return:
 
 ---
 
-For a raw CSV file, see `sample-backlog.csv` in this repository.
-The inline example below is kept for quick reference.
-
-```csv
-ID,Work Item Type,Title 1,Title 2,Area Path,Iteration Path,Priority,Tags
-,User Story,,,Bytes\Data&AI,Bytes\Sprint 1,2,"practice-setup; internal"
-```
+For a raw, import-ready CSV example, see `sample-backlog.csv` in the repository root. The canonical CSV lives there to avoid duplication.
