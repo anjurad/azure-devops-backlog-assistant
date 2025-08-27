@@ -54,3 +54,30 @@ The `.github/copilot-instructions.md` file contains additional examples for Feat
 
 Please open issues or pull requests. If this becomes a collaborative project, add a contribution guide and code of conduct.
 
+## Workspace GitHub Copilot settings
+
+This project includes a committed workspace settings file (.vscode/settings.json) to enable and standardise GitHub Copilot and Copilot Chat behaviour for contributors. The workspace settings include (see the file for exact values):
+
+- github.copilot.enable
+- github.copilot.chat.enable
+- github.copilot.chat.todoList.enabled
+- github.copilot.chat.todoList.openOnStart
+- github.copilot.chat.edits.suggestRelatedFilesFromGitHistory
+- github.copilot.chat.edits.suggestRelatedFilesForTests
+- github.copilot.chat.agent.maxRequests
+- github.copilot.chat.agent.maxConcurrentRequests
+- github.copilot.chat.agent.conversationHistoryEnabled
+- github.copilot.chat.agent.maxConversationLength
+- github.copilot.chat.suggestions.enabled
+- editor.inlineSuggest.enabled
+- notebook.defaultFormatter (set to GitHub.copilot)
+- git.autofetch
+- chat.mcp.serverSampling (MCP sampling for allowed models)
+
+Notes:
+
+- The workspace file is intended to make behaviour reproducible for collaborators. Users can still override values via their User settings.
+- Ensure the GitHub Copilot and Copilot Chat extensions are installed (extension IDs: GitHub.copilot, GitHub.copilot-chat) to get full functionality.
+
+If you want any wording changed or additional instructions (for example, how to revert individual keys or recommended extension versions), tell me what to add.
+

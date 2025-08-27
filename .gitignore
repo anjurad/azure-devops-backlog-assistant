@@ -1,0 +1,58 @@
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp.*
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.egg-info/
+*.egg
+pip-wheel-metadata/
+venv/
+.venv/
+.env
+.env.local
+.env.*.local
+.pytest_cache/
+coverage/
+htmlcov/
+dist/
+build/
+.eggs/
+
+# Logs
+*.log
+
+# IDEs
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# VS Code - keep workspace settings and mcp.json intentionally committed
+.vscode/*
+!.vscode/settings.json
+!.vscode/mcp.json
+
+# Other
+Thumbs.db
+
+# Temporary files
+*.tmp
+*~
+
+# Archives
+*.zip
+*.tar.gz
+*.tgz
+*.rar
