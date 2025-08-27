@@ -117,12 +117,29 @@ For full details, including troubleshooting, examples, and usage with other tool
 - Hierarchy support: Epic → Feature → Story → Task with sample YAML payloads ready to send to the MCP server.
 - Educates: contains examples and guidance for writing INVEST-compliant user stories and splitting large stories.
 
-## Files in this repository
+## Files in this Repository
 
-- `epics.md` — Example or starter epics (project content may vary).
-- `.github/copilot-instructions.md` — The core agent prompt and MCP examples. This file contains the detailed MCP examples and behavioural rules used by the agent.
+### Core Documentation
+- `README.md` — This file. Contains project overview, setup instructions, usage examples, and repository structure.
+- `CONTRIBUTING.md` — Guidelines for contributing to the project, including development setup and contribution process.
+- `LICENSE` — Project license information.
 
-> Note: The project currently contains only prompt materials and documentation. It does not include a runnable MCP server or scripts to call the MCP endpoints. Use this repo as a prompt template and reference for building automation around Azure DevOps MCP tools.
+### MCP Integration & Prompts
+- `.github/copilot-instructions.md` — The core agent prompt and MCP examples. Contains detailed behavioral rules, YAML payload templates, and best practices for Azure DevOps work item management.
+- `.vscode/settings.json` — Workspace settings for VS Code and GitHub Copilot configuration to ensure consistent behavior across contributors.
+
+### Work-in-Progress Area
+- `wip/` — Directory for transient files not yet ready for mainline commits:
+  - `wip/README.md` — Documentation of wip folder rules and usage.
+  - `wip/epics.md` — Working copy of epic examples and templates.
+  - `wip/test.md` — Test documentation and examples.
+  - Various export files (`epics_export.json`, `epics_export_html.json`, etc.) — Temporary data exports for development and testing.
+
+### Configuration Files
+- `.gitignore` — Git ignore rules, including special handling for the wip folder.
+- `.vscode/mcp.json` — MCP server configuration (created during setup).
+
+> **Note**: The project focuses on prompt materials and documentation rather than runnable code. It serves as a template for building Azure DevOps MCP integrations and provides comprehensive guidance for backlog management automation.
 
 ## How to Use
 
@@ -161,9 +178,10 @@ Please open issues or pull requests. If this becomes a collaborative project, ad
 
 The `./wip` directory is used for transient files that are not yet ready for mainline commits. This includes:
 
-- Temporary JSON/Markdown exports (e.g., `epics_export.json`, `epics_export_html.json`).
 - Drafts, scratch notes, and working copies of documentation.
 - Any other files that are experimental or in development.
+
+> **Note**: Files in this directory represent ongoing work product related to Azure DevOps backlog management, MCP integration testing, and project development. These are temporary artifacts that may include experimental YAML payloads, test data exports, or documentation drafts that are not yet ready for the main repository.
 
 ### Rules for the wip Folder
 - The entire `./wip` directory is ignored by Git by default to keep the repository root clean.
