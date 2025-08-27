@@ -128,13 +128,6 @@ For full details, including troubleshooting, examples, and usage with other tool
 - `.github/copilot-instructions.md` — The core agent prompt and MCP examples. Contains detailed behavioral rules, YAML payload templates, and best practices for Azure DevOps work item management.
 - `.vscode/settings.json` — Workspace settings for VS Code and GitHub Copilot configuration to ensure consistent behavior across contributors.
 
-### Work-in-Progress Area
-- `wip/` — Directory for transient files not yet ready for mainline commits:
-  - `wip/README.md` — Documentation of wip folder rules and usage.
-  - `wip/epics.md` — Working copy of epic examples and templates.
-  - `wip/test.md` — Test documentation and examples.
-  - Various export files (`epics_export.json`, `epics_export_html.json`, etc.) — Temporary data exports for development and testing.
-
 ### Configuration Files
 - `.gitignore` — Git ignore rules, including special handling for the wip folder.
 - `.vscode/mcp.json` — MCP server configuration (created during setup).
