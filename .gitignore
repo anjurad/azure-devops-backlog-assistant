@@ -56,3 +56,7 @@ Thumbs.db
 *.tar.gz
 *.tgz
 *.rar
+
+# Work in progress (local transient files)
+/wip/
+!/wip/README.md
