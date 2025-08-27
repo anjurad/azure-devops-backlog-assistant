@@ -157,16 +157,6 @@ tags: ["design", "governance"]
 
 The `.github/copilot-instructions.md` file contains additional examples for Features, Stories, Tasks, and runbook items.
 
-## Recommendations for maintainers
-
-- Add a LICENSE to the repository (MIT or similar) if you plan to share this publicly.
-- Add a `CONTRIBUTING.md` describing how to propose changes to the prompt and examples.
-- If you build tooling around the prompt, include small CLI helpers and a `package.json` or `requirements.txt` depending on language.
-
-## Contributing
-
-Please open issues or pull requests. If this becomes a collaborative project, add a contribution guide and code of conduct.
-
 ## Work-in-Progress (wip) Folder
 
 The `./wip` directory is used for transient files that are not yet ready for mainline commits. This includes:
@@ -183,4 +173,14 @@ The `./wip` directory is used for transient files that are not yet ready for mai
 - When files are ready, move them to the appropriate location in the repository and remove from `wip/`.
 
 See `wip/README.md` for more details on usage.
+
+## Recommendations for maintainers
+
+- Add a LICENSE to the repository (MIT or similar) if you plan to share this publicly.
+- Add a `CONTRIBUTING.md` describing how to propose changes to the prompt and examples.
+- If you build tooling around the prompt, include small CLI helpers and a `package.json` or `requirements.txt` depending on language.
+
+## Contributing
+
+Please open issues or pull requests. If this becomes a collaborative project, add a contribution guide and code of conduct.
 
