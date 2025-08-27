@@ -3,7 +3,7 @@
     {
       "id": "ado_org",
       "type": "promptString",
-      "description": "anjurad"
+      "description": "Azure DevOps organization name  (e.g. 'contoso')"
     }
   ],
   "servers": {
