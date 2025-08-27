@@ -1,0 +1,25 @@
+{
+    "chat.mcp.serverSampling": {
+        "azure-devops-backlog-assistant/.vscode/mcp.json: ado": {
+            "allowedModels": [
+                "copilot/gpt-4.1"
+            ]
+        }
+    },
+    "github.copilot.enable": {
+        "*": true
+    },
+    "github.copilot.chat.enable": true,
+    "github.copilot.chat.edits.suggestRelatedFilesFromGitHistory": true,
+    "github.copilot.chat.edits.suggestRelatedFilesForTests": true,
+    "editor.inlineSuggest.enabled": true,
+    "notebook.defaultFormatter": "GitHub.copilot",
+    "git.autofetch": true,
+    "github.copilot.chat.todoList.enabled": true,
+    "github.copilot.chat.todoList.openOnStart": true,
+    "github.copilot.chat.agent.maxRequests": 100,
+    "github.copilot.chat.agent.maxConcurrentRequests": 5,
+    "github.copilot.chat.agent.conversationHistoryEnabled": true,
+    "github.copilot.chat.agent.maxConversationLength": 30,
+    "github.copilot.chat.suggestions.enabled": true
+}

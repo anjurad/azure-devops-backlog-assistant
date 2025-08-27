@@ -1,64 +1,56 @@
-# Azure DevOps Backlog Assistant – Optimised Prompt
+# Azure DevOps Backlog Assistant (MCP-enabled)
 
-This repository contains an **optimised prompt** for ChatGPT or GitHub Copilot to act as an **experienced Business Analyst and CSV generator**.
+A GitHub Copilot Agent Mode prompt package that helps create, query, and manage Azure DevOps Boards work items using the Model Context Protocol (MCP) server tooling.
 
-- Produces **Epics → Features → User Stories → Tasks** using Agile best practice (INVEST, DoR/DoD).
-- Outputs **ADO-compatible CSVs** for both initial import and iterative updates.
-- Acts as an **educator**: explains story-writing best practice, enforces acceptance criteria, and helps users improve backlog quality.
-- Supports **iteration loop**: download → review CSV → safe updates → re-upload.
+This repository contains an MCP-enabled prompt and guidance for working with Azure Boards programmatically through an MCP server integration. It is intended for Business Analysts, Product Owners, and engineers who want to automate backlog creation, enforce backlog quality, and use structured YAML payloads when interacting with the MCP server.
 
----
+## What this project is
 
-## 📋 Usage Instructions
+- A curated set of prompt instructions and helper examples for an agent that integrates with an Azure DevOps MCP server.
+- Example YAML payloads that show how to create Epics, Features, Stories, Tasks and link them.
+- Best-practice guidance baked into the prompt for backlog grooming, acceptance criteria, DoD, and sizing advice.
 
-### 1. Copy Prompt
-Copy the full prompt (below) into ChatGPT or GitHub Copilot instructions.
-Then provide your backlog requirements (e.g., “Set up runbooks, Terraform modules, certifications”).
+## Key features
 
-### 2. Generate Backlog
-The assistant will:
-- Ask clarifying questions.
-- Draft backlog items (Epics → Tasks).
-- Produce an ADO-compatible CSV.
+- Standards enforcement: requires acceptance criteria and Definition of Done for every story.
+- Hierarchy support: Epic → Feature → Story → Task with sample YAML payloads ready to send to the MCP server.
+- Educates: contains examples and guidance for writing INVEST-compliant user stories and splitting large stories.
 
-### 3. Import to ADO
-- Go to **Boards → Queries → Import Work Items**.
-- Import the CSV.
-- For initial import: omit `ID`.
-- For updates: include `ID`.
-- For hierarchy: use `Title 1`, `Title 2`, etc.
+## Files in this repository
 
-### 4. Iterate
-- Export CSV from ADO.
-- Ask the assistant to review/update it.
-- Re-import updated CSV.
+- `epics.md` — Example or starter epics (project content may vary).
+- `.github/copilot-instructions.md` — The core agent prompt and MCP examples. This file contains the detailed MCP examples and behavioural rules used by the agent.
 
----
+> Note: The project currently contains only prompt materials and documentation. It does not include a runnable MCP server or scripts to call the MCP endpoints. Use this repo as a prompt template and reference for building automation around Azure DevOps MCP tools.
 
-## 🧑‍💼 Final Optimised Prompt
+## How to use
 
-See `FULL_PROMPT.md` for the full optimised prompt and examples.
+1. Open `.github/copilot-instructions.md` to review the agent prompt and examples.
+2. Use your MCP-enabled agent (for example, the GitHub Copilot Agent Mode connected to an Azure DevOps MCP Server) and paste or reference these YAML examples when creating work items.
+3. Confirm changes before the agent executes them — the agent’s flow includes a confirmation step before creating/updating real work items.
 
----
+### Example: create an Epic (MCP YAML payload)
 
-## 📚 Many-Shot Examples Included
-- **Epic 1:** Standardised Artefacts (HLD/LLD templates).
-- **Epic 2:** Reusable Terraform Modules.
-- **Epic 3:** Customer Runbooks.
-- **Epic 4:** Team Certifications.
-- **Epic 5:** Sales Decks.
+Use the `mcp_ado_wit_create_work_item` tool with the following YAML-like payload as the body:
 
-These are pre-populated as working examples.
+```yaml
+#mcp wit_create_work_item
+type: Epic
+title: Architecture & Design Artefacts
+description: "<p>Establish consistent, audit-ready design documentation to accelerate delivery and ensure governance across engagements.</p>"
+acceptance_criteria: "<ul><li>Given a new engagement, when a consultant produces a design, then standard templates are used.</li><li>Given customer review, when artefacts are handed over, then they align with Microsoft best practices.</li></ul>"
+tags: ["design", "governance"]
+```
 
----
+The `.github/copilot-instructions.md` file contains additional examples for Features, Stories, Tasks, and runbook items.
 
-## ✅ Next Steps
-- Extend backlog items for your practice setup.
-- Use `sample-backlog.csv` as a seed import to test.
-- Keep completed CSVs versioned in this repo for traceability.
+## Recommendations for maintainers
 
+- Add a LICENSE to the repository (MIT or similar) if you plan to share this publicly.
+- Add a `CONTRIBUTING.md` describing how to propose changes to the prompt and examples.
+- If you build tooling around the prompt, include small CLI helpers and a `package.json` or `requirements.txt` depending on language.
 
----
+## Contributing
 
-## 📄 Full Prompt File
-See [FULL_PROMPT.md](FULL_PROMPT.md) for the **complete optimised prompt** with examples.
+Please open issues or pull requests. If this becomes a collaborative project, add a contribution guide and code of conduct.
+

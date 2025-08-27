@@ -1,8 +1,0 @@
-ID,Work Item Type,Title 1,Title 2,Title 3,Title 4,Area Path,Iteration Path,Priority,Tags,Description,Acceptance Criteria,Story Points
-,Epic,Establish Standardised Delivery Artefacts,,,,Bytes\Data&AI,Bytes\Sprint 1,2,"practice-setup; internal","<p>Baseline templates (HLD, LLD, As-Built).</p>","<ul><li>Templates reviewed & published.</li></ul>",
-,Feature,,Boilerplate Documentation Templates,,,Bytes\Data&AI,Bytes\Sprint 1,2,"practice-setup; internal","<p>Create skeletons + guidance.</p>","<ul><li>Templates approved.</li></ul>",
-,User Story,,,Create HLD/LLD/As-Built templates,,Bytes\Data&AI,Bytes\Sprint 1,2,"practice-setup; internal","<p>Produce HLD/LLD/As-Built templates.</p>","<ul><li>Given template, when PR approved, then status=Approved & versioned.</li></ul>",5
- ,Task,,,,Draft skeletons,Bytes\Data&AI,Bytes\Sprint 1,2,"practice-setup; internal","<p>Initial drafts.</p>","<ul><li>Drafts committed.</li></ul>",6
-,Epic,Reusable Infrastructure as Code (Terraform),,,,Bytes\Data&AI,Bytes\Sprint 1,2,"practice-setup; internal","<p>Terraform modules for Fabric capacity/workspaces.</p>","<ul><li>Given vars, when applied, then Fabric deployed via IaC.</li></ul>",
-,Feature,,Terraform Modules for Fabric,,,Bytes\Data&AI,Bytes\Sprint 1,2,"practice-setup; internal","<p>Deploy Fabric via TF with CI/CD.</p>","<ul><li>CI/CD pipeline applies on merge.</li></ul>",
-,User Story,,,Publish Terraform modules,,Bytes\Data&AI,Bytes\Sprint 1,2,"practice-setup; internal","<p>Publish TF modules with runbook.</p>","<ul><li>Given PR merge, when CI runs, then Dev auto-applies.</li></ul>",8
